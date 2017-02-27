@@ -1,0 +1,50 @@
+﻿<Window x:Class="HelloWorld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWorld"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Background="#FFEFFFA8">
+        <TextBlock>Enter Name:</TextBlock>
+        <TextBox x:Name="uxName" TextInput="uxName_TextInput" Background="#FFC0BEC0" FontWeight="Bold" BorderBrush="#FF02050E"/>
+        <TextBlock>Enter Password:</TextBlock>
+        <TextBox x:Name="uxPassword" TextInput="uxPassword_TextInput" Background="#FFC0BEC0" FontWeight="Bold" BorderBrush="#FF02050E"/>
+        <Button Content="Submit"
+               Click ="UxSubmit_OnClick" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF042F65" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+<!-- use a button trigger: property trigger exectues setters, with UIElements property value changes.
+create a trigger on any controls, set trigger in style of the control.
+button trigger property IsEnabled when DataTrigger set property value to False.
+(the Style TargetType is the Type Button, So the Property is of Type Button)
+-->
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+<!--DataTrigger applies property value to perform action on Data that Binding to the UIElement. 
+DataTrigger allows to set property value when Binding Data matches specified condition. (this cause is null)
+DataTrigger created on Text property of Binding data. (then set to False for Property:IsEnabled)
+-->
+                        <DataTrigger Binding="{Binding Text.Length, ElementName=uxName, UpdateSourceTrigger=PropertyChanged}" Value="0">
+<!--Setters object of the DataTrigger describes property values to apply when Binding Data match the condition.
+-->
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Text.Length, ElementName=uxPassword, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+<!--for 1 texbox only:
+<Button Content="Submit" Command="{Binding Submit}" 
+-->
+    </StackPanel>
+</Window>
