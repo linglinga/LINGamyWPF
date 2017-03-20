@@ -1,0 +1,10 @@
+C:\source\LINGamyWPF\HW2ListAndMoreList\bin\Debug\HW2ListAndMoreList.exe.config
+C:\source\LINGamyWPF\HW2ListAndMoreList\bin\Debug\HW2ListAndMoreList.exe
+C:\source\LINGamyWPF\HW2ListAndMoreList\bin\Debug\HW2ListAndMoreList.pdb
+C:\source\LINGamyWPF\HW2ListAndMoreList\obj\Debug\HW2ListAndMoreList.csprojResolveAssemblyReference.cache
+C:\source\LINGamyWPF\HW2ListAndMoreList\obj\Debug\HW2ListAndMoreList.exe
+C:\source\LINGamyWPF\HW2ListAndMoreList\obj\Debug\HW2ListAndMoreList.pdb
+C:\Users\amy\Downloads\LINGamyWPF-master (2)\LINGamyWPF-master\HW2ListAndMoreList\bin\Debug\HW2ListAndMoreList.exe.config
+C:\Users\amy\Downloads\LINGamyWPF-master (2)\LINGamyWPF-master\HW2ListAndMoreList\obj\Debug\HW2ListAndMoreList.exe
+C:\Users\amy\Downloads\LINGamyWPF-master (2)\LINGamyWPF-master\HW2ListAndMoreList\obj\Debug\HW2ListAndMoreList.pdb
+C:\Users\amy\Downloads\LINGamyWPF-master (2)\LINGamyWPF-master\HW2ListAndMoreList\obj\Debug\HW2ListAndMoreList.csprojResolveAssemblyReference.cache
